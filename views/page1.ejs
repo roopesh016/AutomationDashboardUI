@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>RCP QA Automation dashboard</title>
+  <script>
+    function autoRefresh() {
+        window.location = window.location.href;
+    }
+    setInterval('autoRefresh()', 2000000);
+</script>
+	<h1> <center> RCP QA  Automation Dashboard </center>
+		<link rel="stylesheet" href="css/header.css"> </h1>
+<link rel="stylesheet" href="css/bg.css">
+<style>
+	.container {
+  height: 300vh;
+   display: grid;
+  grid-gap: 3rem;
+  background: #4d4d4d;
+  grid-template-columns: 14fr 14fr 14fr;
+  grid-template-rows: 14fr 14fr 14fr 14fr 14fr;
+}
+  .item1{
+  	background: #ff6666;
+    padding: 10px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+
+  } 
+  .item1:hover{
+   box-shadow: 0px 0px 50px #000000;
+    z-index: 2;
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1.0);
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1.0);   
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1.0);
+    transition: all 100ms ease-in;
+    transform: scale(1.0);
+  }
+
+  .item2{
+  	background: #ff9933;
+    padding: 10px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  }
+  .item2:hover{
+   box-shadow: 0px 0px 50px #000000;
+    z-index: 2;
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1.0);
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1.0);   
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1.0);
+    transition: all 100ms ease-in;
+    transform: scale(1.0);
+  }
+
+
+  .item3{
+  	background: #0066ff;
+    padding: 10px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  }
+  .item3:hover{
+   box-shadow: 0px 0px 50px #000000;
+    z-index: 2;
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1.0);
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1.0);   
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1.0);
+    transition: all 100ms ease-in;
+    transform: scale(1.0);
+  }
+
+  .item4{
+  	background: #cc6699;
+    padding: 10px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  }
+  .item4:hover{
+   box-shadow: 0px 0px 50px #000000;
+    z-index: 2;
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1.0);
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1.0);   
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1.0);
+    transition: all 100ms ease-in;
+    transform: scale(1.0);
+  }
+
+  .item5{
+  	background: #004de6;
+    padding: 10px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  }
+  .item5:hover{
+   box-shadow: 0px 0px 50px #000000;
+    z-index: 2;
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1.0);
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1.0);   
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1.0);
+    transition: all 100ms ease-in;
+    transform: scale(1.0);
+  }
+
+  .item6{
+  	background: #9966ff;
+    padding: 10px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  }
+  .item6:hover{
+   box-shadow: 0px 0px 50px #000000;
+    z-index: 2;
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1.0);
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1.0);   
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1.0);
+    transition: all 100ms ease-in;
+    transform: scale(1.0);
+  }
+
+  .item7{
+  	background: #ff9999;
+    padding: 10px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  }
+  .item7:hover{
+   box-shadow: 0px 0px 50px #000000;
+    z-index: 2;
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1.0);
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1.0);   
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1.0);
+    transition: all 100ms ease-in;
+    transform: scale(1.0);
+  }
+
+  .item8{
+  	background: #ccff99;
+    padding: 10px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  }
+  .item8:hover{
+   box-shadow: 0px 0px 50px #000000;
+    z-index: 2;
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1.0);
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1.0);   
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1.0);
+    transition: all 100ms ease-in;
+    transform: scale(1.0);
+  }
+
+   .item9{
+  	background: #663300;
+    padding: 10px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  }
+  .item9:hover{
+   box-shadow: 0px 0px 50px #000000;
+    z-index: 2;
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1.0);
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1.0);   
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1.0);
+    transition: all 100ms ease-in;
+    transform: scale(1.0);
+  }
+
+   .item10{
+  	background: #ff00ff;
+    padding: 10px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  }
+  .item10:hover{
+   box-shadow: 0px 0px 50px #000000;
+    z-index: 2;
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1.0);
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1.0);   
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1.0);
+    transition: all 100ms ease-in;
+    transform: scale(1.0);
+  }
+
+   .item11{
+    background: #ffcc99;
+    padding: 10px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  }
+  .item11:hover{
+   box-shadow: 0px 0px 50px #000000;
+    z-index: 2;
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1.0);
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1.0);   
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1.0);
+    transition: all 100ms ease-in;
+    transform: scale(1.0);
+  }
+
+   .item12{
+    background: #e91640;
+    padding: 10px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  }
+  .item12:hover{
+   box-shadow: 0px 0px 50px #000000;
+    z-index: 2;
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1.0);
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1.0);   
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1.0);
+    transition: all 100ms ease-in;
+    transform: scale(1.0);
+  }
+
+   .item13{
+    background: #00e600;
+    padding: 10px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  }
+  .item13:hover{
+   box-shadow: 0px 0px 50px #000000;
+    z-index: 2;
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1.0);
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1.0);   
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1.0);
+    transition: all 100ms ease-in;
+    transform: scale(1.0);
+  }
+
+ .table-wrapper{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+table {
+  background-color: #ffc6b3;
+  padding: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 20px auto;
+}
+td,
+th  {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+td {
+  background-color: white;
+  color: #333;
+  padding: 10px;
+}
+thead th {
+  width: 25%;
+}
+tbody tr:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e9ecef;
+}
+</style>
+
+<div class ="container"> 
+
+  <div class ="item1"><b style="color:#800000" >GAT</b>
+ <div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>TotalTestCases</th>
+      <th>Automated</th>
+      <th>Automated (%)</th>
+    </tr>
+  </thead>
+  <tbody id="gat_body">
+    
+  </tbody>
+</table>
+</div>
+<script type="text/javascript" src="DOM/script.js"> </script>
+</div>	
+  <div class ="item2"><b style="color:#4d2e00" >Shiba Data Observability</b>
+ <div class="table-wrapper">
+ <table>
+  <thead>
+    <tr>
+      <th>TotalTestCases</th>
+      <th>Automated</th>
+      <th>Automated (%)</th>
+    </tr>
+  </thead>
+  <tbody id="observabiltiy_body">
+    
+  </tbody>
+</table>
+</div>
+<script type="text/javascript" src="DOM/observability.js"> </script>
+  </div>
+  <div class ="item3"><b style="color:#00394d" >PKG</b>
+   
+    <div class="table-wrapper">
+    <table>
+  <thead>
+    <tr>
+      <th>TotalTestCases</th>
+      <th>Automated</th>
+      <th>Automated (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>100</td>
+      <td>70</td>
+      <td>70</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+  </div>
+  <div class ="item4"><b style="color:#4d1933" >Senjutsu Data Analytics</b>
+
+    <div class="table-wrapper">
+    <table>
+  <thead>
+    <tr>
+      <th>TotalTestCases</th>
+      <th>Automated</th>
+      <th>Automated (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>100</td>
+      <td>70</td>
+      <td>70</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+  </div>
+  <div class ="item5"><b style="color:#002266" >Crawler2.0</b>
+
+   <div class="table-wrapper">
+    <table>
+  <thead>
+    <tr>
+      <th>TotalTestCases</th>
+      <th>Automated</th>
+      <th>Automated (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>100</td>
+      <td>70</td>
+      <td>70</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+  </div>
+  <div class ="item6"><b style="color:#2a0080" >Hawkeye</b>
+
+    <div class="table-wrapper">
+    <table>
+  <thead>
+    <tr>
+      <th>TotalTestCases</th>
+      <th>Automated</th>
+      <th>Automated (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>100</td>
+      <td>70</td>
+      <td>70</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+  </div>
+  <div class ="item7"><b style="color:#4d0000" >Product Assortment</b>
+
+   <div class="table-wrapper">
+    <table>
+  <thead>
+    <tr>
+      <th>TotalTestCases</th>
+      <th>Automated</th>
+      <th>Automated (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>100</td>
+      <td>70</td>
+      <td>70</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+  </div>
+  <div class ="item8"><b style="color:#264d00" >Merchant Discovery</b>
+
+   <div class="table-wrapper">
+    <table>
+  <thead>
+    <tr>
+      <th>TotalTestCases</th>
+      <th>Automated</th>
+      <th>Automated (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>100</td>
+      <td>70</td>
+      <td>70</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+  </div>
+  <div class ="item9"><b style="color:#ffd9b3" >PMaaS</b>
+
+
+   <div class="table-wrapper">
+    <table>
+  <thead>
+    <tr>
+      <th>TotalTestCases</th>
+      <th>Automated</th>
+      <th>Automated (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>100</td>
+      <td>70</td>
+      <td>70</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+  </div>
+  <div class ="item10"><b style="color:#330033" >Image Central</b>
+
+
+    <div class="table-wrapper">
+    <table>
+  <thead>
+    <tr>
+      <th>TotalTestCases</th>
+      <th>Automated</th>
+      <th>Automated (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>100</td>
+      <td>70</td>
+      <td>70</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+  </div>
+  <div class ="item11"><b style="color:#804000" >Data Validation</b>
+
+   <div class="table-wrapper">
+    <table>
+  <thead>
+    <tr>
+      <th>TotalTestCases</th>
+      <th>Automated</th>
+      <th>Automated (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>100</td>
+      <td>70</td>
+      <td>70</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+  </div>
+  <div class ="item12"><b style="color:#fde8ec" >NAAS</b>
+
+   <div class="table-wrapper">
+    <table>
+  <thead>
+    <tr>
+      <th>TotalTestCases</th>
+      <th>Automated</th>
+      <th>Automated (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>100</td>
+      <td>70</td>
+      <td>70</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+  </div>
+  <div class ="item13"><b style="color:#004d00" >AAT</b>
+
+   <div class="table-wrapper">
+    <table>
+  <thead>
+    <tr>
+      <th>TotalTestCases</th>
+      <th>Automated</th>
+      <th>Automated (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>100</td>
+      <td>70</td>
+      <td>70</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+</div>
+</div>
+</head>
+</html>
